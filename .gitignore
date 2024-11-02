@@ -1,0 +1,8 @@
+# 证书及个人信息
+/ssl
+*.key
+*.crt
+*.json
+
+# 配置信息
+config.ini
