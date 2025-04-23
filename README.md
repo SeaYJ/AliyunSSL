@@ -26,3 +26,15 @@ git clone https://github.com/SeaYJ/AliyunSSL.git
 |`DOMAIN1`|template.com|（可调整）主要域名，申请证书时需要指定的域名。请替换为您的实际域名。|
 |`DOMAIN2`|*.template.com|（可选）通配符域名，允许您为该域名下的所有子域名申请证书。例如，*.example.com 将覆盖 www.example.com 和 api.example.com。|
 |`LEGO_DNS_RESOLVERS`|dns0.template.com,dns1.template.com|用于 DNS 验证的 DNS 服务器地址，确保使用的 DNS 服务器支持 ACME DNS-01 挑战。请替换为您实际使用的 DNS 服务器地址。</br>可以写一个，也可以写多个；可以写 DNS 服务器的 **ip 地址**，也可以写 DNS 服务器的**域名地址**。|
+
+# 其他说明
+
+生成的 SSL 证书文件存放在 [ssl/certificates](ssl/certificates)，其中后缀为 **.crt** 的文件即为你的**域名证书**，**.issuer.crt** 文件为**中间证书**（或称为**颁发者证书**），**.key** 文件为**域名私钥**。
+
+具体可见下表：
+
+|**文件后缀**|**说明**|
+|:--|:--|
+|`.crt`|域名证书|
+|`.issuer.crt`|中间证书/颁发者证书|
+|`.key`|域名私钥|
